@@ -1,0 +1,5 @@
+1. PyIxExplorer 是连接IXIA的库。其底层是用socket连接到服务器（服务器的server是用tcl实现）。
+	当然也有用paramiko实现的ssh连接。但未经使用验证，仅供参考。 文件路径：ixexplorer\api\tclproto.py
+2. 关于telnet连接，可以参考robot里存在的telnet库。
+3. SNMP可以参考KATE的TESTFRAME里的SNMP连接。
+	文件路径： TESTFRAME\FRAMEWORK\katelibs\snmp.py
