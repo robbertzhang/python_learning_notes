@@ -1,5 +1,11 @@
-1. PyIxExplorer ������IXIA�Ŀ⡣��ײ�����socket���ӵ�����������������server����tclʵ�֣���
-	��ȻҲ����paramikoʵ�ֵ�ssh���ӡ���δ��ʹ����֤�������ο��� �ļ�·����ixexplorer\api\tclproto.py
-2. ����telnet���ӣ����Բο�robot����ڵ�telnet�⡣
-3. SNMP���Բο�KATE��TESTFRAME���SNMP���ӡ�
-	�ļ�·���� TESTFRAME\FRAMEWORK\katelibs\snmp.py
+1. PyIxExplorer 是连接IXIA的库。其底层是用socket连接到服务器（服务器的server是用tcl实现）。
+	当然也有用paramiko实现的ssh连接。但未经使用验证，仅供参考。 文件路径：ixexplorer\api\tclproto.py
+2. 关于telnet连接，可以参考robot里存在的telnet库。
+3. SNMP可以参考KATE的TESTFRAME里的SNMP连接。
+	文件路径： TESTFRAME\FRAMEWORK\katelibs\snmp.py
+	
+4. 压缩文件 get_infos_from_neat_scripts 涉及知识点：
+    1. 统一日志的打印
+    2. 多线程的启动/锁/线程内出现异常的处理
+    3. 到linux的连接；文件下载；连续执行的上下承接（即一个连接cd切换目录）
+    4. 数据库mysql的创建与执行
